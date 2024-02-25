@@ -3,27 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>testing things</title>
+    <title>Running deep</title>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link href="./output.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-    <!-- profile pic/running icon, two basic stats with running icon. -->
-    <!-- with title underneath -->
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-100 rounded-md shadow-md p-5">
-        <div class="flex justify-center items-center">
-          <img src="../public/images/run.svg" alt="shoe_image" class="w-40 h-40" />
-        </div>
-        <h2 class="text-slate-500 text-center">
-          Let's check your running stats
-        </h2>
-      </div>
-    </div>
+    <div id="root">something went wrong 🤔</div>
     <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
     <script>
-      // Your code is going to go here
+      const App = () => {
+        return React.createElement(
+          "div",
+          { className: 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'},
+          React.createElement(
+            "div",
+            { className: 'bg-slate-100 rounded-md shadow-md p-5'},
+            React.createElement(
+              "div",
+              { className: 'flex justify-center items-center'},
+              React.createElement(
+                "img",
+                { src: '../public/images/run.svg', alt: 'shoe_image', className: 'w-40 h-40'}
+              )
+            )
+          ),
+          React.createElement(
+            "div",
+            { className: 'bg-slate-100 rounded-md shadow-md p-5 mt-5'},
+            React.createElement(
+              "h2",
+              { className: 'text-slate-500 text-center'},
+              'Last seven days:'
+            )
+          ),
+          React.createElement(
+            "div",
+            { className: 'bg-slate-100 rounded-md shadow-md p-5 mt-5'},
+            React.createElement(
+              "h2",
+              { className: 'text-slate-500 text-center'},
+              '500 miles'
+            )
+          ),
+          React.createElement(
+            "div",
+            { className: 'bg-slate-100 rounded-md shadow-md p-5 mt-5'},
+            React.createElement(
+              "h2",
+              { className: 'text-slate-500 text-center'},
+              '2,850 ft'
+            )
+          ),
+          React.createElement(
+            "div",
+            { className: 'bg-slate-100 rounded-md shadow-md p-5 mt-5'},
+            React.createElement(
+              "h2",
+              { className: 'text-slate-500 text-center'},
+              '155 avg bpm'
+            )
+          )
+        )
+      }
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(React.createElement(App));
     </script>
   </body>
 </html>
