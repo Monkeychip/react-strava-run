@@ -1,0 +1,27 @@
+{
+  "name": "react-fun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "prettier": "3.2.5",
+    "tailwindcss": "^3.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Monkeychip/react-strava-run.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Monkeychip/react-strava-run/issues"
+  },
+  "homepage": "https://github.com/Monkeychip/react-strava-run#readme",
+  "dependencies": {
+    "@headlessui/react": "^1.7.18"
+  }
+}
