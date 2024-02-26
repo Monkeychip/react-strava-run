@@ -42,8 +42,7 @@ const Datum = () => {
   return React.createElement(
     "div",
     {
-      className:
-        "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col w-100 h-100 p-5",
+      className: "col-span-3 flex flex-col w-100 h-100 p-5",
     },
     React.createElement(DateRange),
     React.createElement(
@@ -71,28 +70,30 @@ const Datum = () => {
     React.createElement(Button, { buttonText: "👟" }),
   );
 };
-const CompareGridColumn = () => {
+const AddSingleView = () => {
   return React.createElement(
     "div",
-    {},
+    { className: "self-center" },
     React.createElement(ButtonCircle, { buttonText: "+" }),
   );
 };
 const SingleView = () => {
   return React.createElement(
     "div",
-    { className: "grid grid-cols-2 gap-4", id: "single-view" },
-    React.createElement(
-      "div",
-      { className: "bg-slate-100 rounded-md shadow-md mt-5" },
-      React.createElement(Datum),
-      React.createElement(CompareGridColumn),
-    ),
+    { className: "grid grid-cols-4 gap-4 w-1/3", id: "single-view" },
+    [React.createElement(Datum), React.createElement(AddSingleView)],
   );
 };
 
 const App = () => {
-  return React.createElement("div", {}, React.createElement(SingleView));
+  return React.createElement(
+    "div",
+    {
+      id: "react-app",
+      className: "flex justify-center bg-slate-800 h-screen w-screen p-5",
+    },
+    React.createElement(SingleView),
+  );
 };
 
 const container = document.getElementById("root");
