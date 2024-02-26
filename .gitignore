@@ -10,5 +10,7 @@ logs
 
 node_modules
 bower_components
+coverage/
+.vscode/
 
 # End of https://www.toptal.com/developers/gitignore/api/react
